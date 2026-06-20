@@ -1,0 +1,65 @@
+/* Componentes y utilidades personalizadas (complementan Tailwind CDN) */
+
+.navbar-logo {
+    height: 2.5rem;
+    max-height: 2.5rem;
+    width: 2.5rem;
+    max-width: 2.5rem;
+    object-fit: contain;
+    flex-shrink: 0;
+    filter: invert(13%) sepia(45%) saturate(800%) hue-rotate(110deg) brightness(90%) contrast(110%);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(113, 121, 115, 0.2);
+}
+
+.bg-pattern-dots {
+    background-color: #f9faf6;
+    background-image: radial-gradient(#71797320 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.bg-pattern-lines {
+    background-color: #f3f4f0;
+    background-image: linear-gradient(0deg, #71797310 1px, transparent 1px);
+    background-size: 100% 40px;
+}
+
+.bg-gradient-soft {
+    background: linear-gradient(135deg, #f9faf6 0%, #f3f4f0 100%);
+}
+
+.faq-item input:checked ~ .faq-content {
+    max-height: 500px;
+    margin-top: 16px;
+    opacity: 1;
+}
+
+.faq-item input:checked ~ label .faq-icon {
+    transform: rotate(180deg);
+}
+
+.testimonial-slide {
+    display: none;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.testimonial-slide.active {
+    display: block;
+}
+
+.testimonial-card {
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.about-image-mask {
+    mask-image: radial-gradient(circle, black 60%, transparent 100%);
+}
